@@ -27,6 +27,7 @@ gem 'tomdoc'
 gem 'minitest'
 gem 'factory_girl'
 gem 'resque'
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
