@@ -28,7 +28,7 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        UserMailer.signup_broadcast(@person)
+        Resque.enqueue(SignupBroadcast, @person.id)
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
         format.json { render :show, status: :created, location: @person }
       else
@@ -56,7 +56,7 @@ class PeopleController < ApplicationController
   # DELETE /people/1.json
   def destroy
     @person.destroy
-    UserMailer.delete_broadcast(@person)
+    Resque.enqueue(DeleteBroadcast, @person.id)
     respond_to do |format|
       format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
       format.json { head :no_content }

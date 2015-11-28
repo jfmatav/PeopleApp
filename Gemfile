@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'tomdoc'
 gem 'minitest'
 gem 'factory_girl'
-gem 'resque'
+gem 'resque', :require => "resque/server"
 gem 'resque_mailer'
 gem 'faker'
 
