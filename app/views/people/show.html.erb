@@ -37,7 +37,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @person.picture %>
+  <%= link_to @person.picture, @person.picture %>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |

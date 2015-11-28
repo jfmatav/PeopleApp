@@ -27,6 +27,7 @@ gem 'tomdoc'
 gem 'minitest'
 gem 'factory_girl'
 gem 'resque'
+gem 'resque_mailer'
 gem 'faker'
 
 # Use ActiveModel has_secure_password
