@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Directory</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>People App</title>
+  <!--%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "xkcd.css" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<div id="middleContainer" class="box">
+
+<div id="ctitle">People App</div>
+
+<div id="comic">
 <%= yield %>
+</div>
+
+</div>
+
 
 </body>
 </html>
